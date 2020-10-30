@@ -1,0 +1,14 @@
+.pageheader{
+    text-align: center;
+    border-bottom: solid;
+    border-color: black;
+}
+.row{
+    height:60px;
+    border: solid;
+}
+#container{
+    margin-bottom: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
