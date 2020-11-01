@@ -1,20 +1,49 @@
 var dateDiv = document.getElementById("today-date")
-dateDiv.append("It is currently " + now)
+var pageHeader = document.getElementById("pageheader")
+dateDiv.textContent =  "It is currently " + now
+pageHeader.appendChild(dateDiv)
 var dayEl = document.getElementById("container")
+var hourVal = moment().hour()
 
 var workDay = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm"]
- for (var i = 0; i < workDay.length; i++) {
+ for (var i = 0; i < hourArray.length; i++) {
     var row = document.createElement('div')
-    var rowLabel = document.createElement("label")
-    var hourDiv = document.createElement("div")
-    hourDiv.setAttribute("id","hourdiv")
-    hourDiv.setAttribute("value",(i + 9))
-    rowLabel = workDay[i]
-
-    row.setAttribute("id",workDay[i])
     row.setAttribute("class","row")
     dayEl.appendChild(row)
-    row.append(rowLabel)
-    row.append(hourDiv)
+    var rowLabel = document.createElement("div")
+   rowLabel.textContent = workDay[i]
+    var hourInput = document.createElement("input")
+    var saveAppt = document.createElement("button")
+    saveAppt.setAttribute("class","loghour")
+    hourInput.setAttribute("id","hourInput")
+   rowLabel.setAttribute("label",workDay[i])
+    rowLabel.setAttribute("class","label")
+   //  rowLabel = workDay[i]
+
+    row.setAttribute("id",hourArray[i])
+    row.setAttribute("class","row")
+  
+    row.appendChild(rowLabel)
+
+    row.appendChild(hourInput)
+    row.appendChild(saveAppt)
     assignClass()
- }
+
+
+    function assignClass() {
+      for (var i = 0; i < hourArray.length; i++) {
+      var hourValue = i + 9
+      hourValue++
+  
+      if (hourVal > hourArray[i]) {
+         hourInput.setAttribute('class','pasthour')
+      }
+      if (hourVal < hourArray[i]) {
+         hourInput.setAttribute('class','futurehour')
+
+      }
+      if (hourVal === hourArray[i]) {
+         hourInput.setAttribute('class','pasthour')
+    
+      }
+ }}}
