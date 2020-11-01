@@ -12,3 +12,17 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.pasthour{
+    background-color:crimson ;
+    color:crimson
+}
+.futurehour{
+    background-color: green;
+    color:green;
+}
+#hourdiv{
+    float: right;
+  
+    width:90%;
+    height: 100%;
+}
