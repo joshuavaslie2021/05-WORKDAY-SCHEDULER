@@ -43,22 +43,23 @@ var workDay = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm"
 
 
     function assignClass() {
-      for (var i = 0; i < hourArray.length; i++) {
-      var hourValue = i + 9
-      hourValue++
+
+    
+      console.log(hourValue)
+   
   
-      if (hourVal > hourArray[i]) {
+      if (hourValue > hourArray[i]) {
          hourInput.setAttribute('class','pasthour')
       }
-      if (hourVal < hourArray[i]) {
+      if (hourValue < hourArray[i]) {
          hourInput.setAttribute('class','futurehour')
 
       }
-      if (hourVal === hourArray[i]) {
-         hourInput.setAttribute('class','pasthour')
+      if (hourValue === hourArray[i]) {
+         hourInput.setAttribute('class','nowhour')
     
       }
- }}}
+ }}
 
  saveAppt.addEventListener("click", function(event) {
    event.preventDefault();
