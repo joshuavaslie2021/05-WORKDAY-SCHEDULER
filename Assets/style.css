@@ -14,29 +14,48 @@
 
 .pasthour{
     background-color:gray ;
-    color:gray
+    color:gray;
+    color:wheat;
+    width:90%;
+    height:97%;
+    border:none;
+    float:right;
 }
 .futurehour{
     background-color: green;
     color:green;
+    color:wheat;
+    width:90%;
+    height:97%;
+    border:none;
+    float:right;
 }
 .nowhour{
     background-color:crimson;
-}
-#hourInput{
-   color:wheat;
-   width:79%;
-   height:97%;
-   border:none;
+    color:wheat;
+    width:90%;
+    height:97%;
+    border:none;
+    float:right;
 }
 .loghour{
     float:right;
-    height:100%;
-    width:10%;
-    padding:0px;
+    height:66px;
+    width:100%;
+    padding:5px;
+    border-color:black;
+    border-style:solid;
 }
 .label{
     height:100%;
     float:left;
-    width:10%;
+    width:5%;
+}
+#buttons{
+    float:right;
+    width:10%
+}
+#input{
+    float:left;
+    width:90%;
 }
