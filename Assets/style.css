@@ -32,30 +32,36 @@
 }
 .nowhour{
     background-color:crimson;
-    color:wheat;
+    color:blue;
     width:90%;
     height:97%;
     border:none;
     float:right;
 }
 .loghour{
-    float:right;
-    height:66px;
-    width:100%;
+   
+    padding:none;
+    margin: none;
+    height:100%;
+    width:10%;
     padding:5px;
     border-color:black;
     border-style:solid;
+    order:3;
 }
-.label{
+label{
     height:100%;
-    float:left;
-    width:5%;
+    width:10%;
+    order:1;
 }
-#buttons{
-    float:right;
-    width:10%
+.form{
+    justify-content: center;
+    display:flex;
+    height:60px;
+    width:100%;
 }
-#input{
-    float:left;
-    width:90%;
+.input{
+    width:80%;
+    height:96%;
+    order:2;
 }
