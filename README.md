@@ -2,6 +2,7 @@
 
 ## DESCRIPTION
 
+Homework #5 in Northwestern's coding bootcamp asks us to contstruct a webpage that utilizes time-based javascript with moment.js to render a basic day planner. The planner updates on the hour to indicate what hours have passed, and stores appoints locally for the user to look back to.
 
 ## INSTALLATION
 
@@ -9,7 +10,7 @@ The site is deployed at the below link, along with all work stored in my github 
 
 ## SCREENSHOT
 
-![Image of site mainpage](https://joshuavaslie2021.github.io/03-Password-Generator/Assets/stockscreenshot.png)
+![Image of site mainpage](https://joshuavaslie2021.github.io//Assets/stockscreenshot.png)
 
 
 ## LINK TO DEPLOYED APPLICATION    
