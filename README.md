@@ -10,7 +10,7 @@ The site is deployed at the below link, along with all work stored in my github 
 
 ## SCREENSHOT
 
-![Image of site mainpage](https://joshuavaslie2021.github.io//Assets/stockscreenshot.png)
+![Image of site mainpage](https://joshuavaslie2021.github.io/05-WORKDAY-SCHEDULER/Assets/screenshot.png)
 
 
 ## LINK TO DEPLOYED APPLICATION    
@@ -19,7 +19,7 @@ The site is deployed at the below link, along with all work stored in my github 
 
 ## USAGE
 
-
+The application allows users to store their daily schedule locally, and updates as the hours progress within the 24-hour period.
 
 # LICENSE
 
