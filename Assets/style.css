@@ -1,7 +1,14 @@
-.pageheader{
+#pageheader{
     text-align: center;
     border-bottom: solid;
     border-color: black;
+    background-color: cornflowerblue;
+    padding:none;
+    margin-top: none;
+    color:white;
+}
+label{
+    margin-top:20px;
 }
 .row{
     height:60px;
@@ -11,15 +18,20 @@
     padding-top: 0px;
     padding-bottom: 0px;
 }
-
+#container{
+    margin-bottom: 100px;
+}
 .pasthour{
     background-color:gray ;
     color:gray;
-    color:wheat;
     width:90%;
     height:97%;
     border:none;
     float:right;
+    border-radius: 8px;
+    border-style:solid;
+    border-color: black;
+    color:white;
 }
 .futurehour{
     background-color: green;
@@ -29,6 +41,10 @@
     height:97%;
     border:none;
     float:right;
+    border-radius: 8px;
+    border-style:solid;
+    border-color: black;
+    color:white;
 }
 .nowhour{
     background-color:crimson;
@@ -37,6 +53,10 @@
     height:97%;
     border:none;
     float:right;
+    border-radius: 8px;
+    border-style:solid;
+    border-color: black;
+    color:white;
 }
 .loghour{
    
@@ -48,6 +68,7 @@
     border-color:black;
     border-style:solid;
     order:3;
+    border-radius: 8px;
 }
 label{
     height:100%;
