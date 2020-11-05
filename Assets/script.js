@@ -1,76 +1,76 @@
-var dateDiv = document.getElementById("today-date")
-var pageHeader = document.getElementById("pageheader")
-dateDiv.textContent =  "It is currently " + now
-pageHeader.appendChild(dateDiv)
-var dayEl = document.getElementById("container")
-var hourVal = moment().hour()
-var workDay = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm"]
-
-
-function renderSchedule() {
-var storedSchedule = JSON.parse(localStorage.getItem("schedule"))
-console.log(storedSchedule)
-
-}
-
+$(document).ready(function() {
+  var storedSchedule = JSON.parse(localStorage.getItem("schedule"))
+  var dateDiv = $("#today-date")
+  var pageHeader = $("#pageheader")
+  dateDiv.text("It is currently " + now)
+  pageHeader.append(dateDiv)
+  var dayEl = $("#container")
+  var formNum = 0
+  var hourVal = moment().hour()
+  var workDay = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm","6 pm","7 pm","8 pm","9 pm"]
   for (var i = 0; i < hourArray.length; i++) {
     var input = $('<input>')
-    var formNum = i + 9
- 
-    input.attr('id',hourArray[i])
+    formNum = i + 9
+   
+    input.attr('id',hourArray[i]) 
     input.attr('class','input')
     $('#form'+formNum).append(input)
-    
+      
     myinputId = input.attr('id')
-
-    // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
+  
     if (hourValue > myinputId) {
-      $('#'+formNum).addClass('pasthour')
-   }
-   if (hourValue < myinputId) {
-    $("#"+formNum).addClass('futurehour')
-
-   }
-   if (hourValue == myinputId) {
-    $("#"+formNum).addClass('nowhour')
- 
-   }}
+        $('#'+formNum).addClass('pasthour')
+        $('#'+formNum).val()
+     }
+     if (hourValue < myinputId) {
+      $("#"+formNum).addClass('futurehour')
+  
+     }
+     if (hourValue == myinputId) {
+      $("#"+formNum).addClass('nowhour')
+     }
+     $("#9").val(storedSchedule.Nine)
+     $("#10").val(storedSchedule.Ten)
+     $("#11").val(storedSchedule.Eleven) 
+     $("#12").val(storedSchedule.Twelve)
+     $("#13").val(storedSchedule.Thirteen)
+     $("#14").val(storedSchedule.Fourteen)
+     $("#15").val(storedSchedule.Fifteen)
+     $("#16").val(storedSchedule.Sixteen)
+     $("#17").val(storedSchedule.Seventeen)
+     $("#18").val(storedSchedule.Eighteen)
+     $("#19").val(storedSchedule.Nineteen)
+     $("#20").val(storedSchedule.Twenty)
+     $("#21").val(storedSchedule.Twentyone)
+  }
+  })
    
-  var apptArray = {
-  "9":$("#9").val(),
-  "10":$("#10").val(),
-  "11":$("#11").val(),
-  "12":$("#12").val(),
-  "13":$("#13").val(),
-  "14":$("#14").val(),
-  "15":$("#15").val(),
-  "16":$("#16").val(),
-  "17":$("#17").val(),
-  "18":$("#18").val(),
-  "19":$("#19").val(),
-  "20":$("#20").val(),
-  "21":$("#21").val()
-}
-
-
-todoForm = $(".loghour")
+    
+    
  $(".loghour").on("click",function(event) {
   event.preventDefault();   
-  var btnNum = $(this).attr("id")
-  var formBtn = btnNum-13
-  var arrayVal = formBtn-13
-  console.log(btnNum)
+  var apptArray = {
+    Nine:$("#9").val(),
+    Ten:$("#10").val(),
+    Eleven:$("#11").val(),
+    Twelve:$("#12").val(),
+    Thirteen:$("#13").val(),
+    Fourteen:$("#14").val(),
+    Fifteen:$("#15").val(),
+    Sixteen:$("#16").val(),
+    Seventeen:$("#17").val(),
+    Eighteen:$("#18").val(),
+    Nineteen:$("#19").val(),
+    Twenty:$("#20").val(),
+    Twentyone:$("#21").val(),
+   }
+  btnNum = $(this).attr("id")
+  formBtn = btnNum-13
   var BtnVal = $("#"+formBtn).val().trim()
   apptArray[formBtn] = BtnVal
-  console.log(BtnVal)
-  console.log(apptArray)
-  storeAppts()
-  
+  localStorage.setItem("schedule",JSON.stringify(apptArray))
+  document.ready
  })
 
-
-function storeAppts() {
-  localStorage.setItem("schedule",JSON.stringify(apptArray))
- }
  
 
